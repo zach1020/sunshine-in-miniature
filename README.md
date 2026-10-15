@@ -11,8 +11,8 @@ Three miniature-inspired post-processing presets for **Dolphin Emulator**. Start
 | Preset | What it does | Best for |
 | --- | --- | --- |
 | **Clear** | Gentle warm color grading and a subtle vignette; no added blur, bloom, or pixelation | Dialogue, cinematics, and everyday play |
-| **Diorama** | Warm highlights, cool shadows, bloom, pixel treatment, and a miniature focus band | A softer, atmospheric look |
-| **Diorama Max** | Narrower focus, stronger blur, broader glow, chunkier pixels, and deeper edge shading | Going all-in on the miniature aesthetic |
+| **Diorama** | Warm highlights, cool shadows, cascading sunlight rays, bloom, pixel treatment, and a miniature focus band | A softer, atmospheric look |
+| **Diorama Max** | Sunlight rays, narrower focus, stronger blur, broader glow, chunkier pixels, and deeper edge shading | Going all-in on the miniature aesthetic |
 
 ## Install
 
@@ -30,9 +30,59 @@ For portable Dolphin, the folder is usually `Dolphin-x64/User/Shaders`. Using **
 
 To revert, select **Off** in the effect list or choose a different preset. Shader settings are separate from your game saves.
 
+## Install with ChatGPT / Codex or Claude
+
+You can ask an assistant to handle the file copying and help select a preset. Automatic installation requires an assistant with permission to access files on your computer, such as [Codex](https://learn.chatgpt.com/docs/codex/cli) or [Claude Code](https://code.claude.com/docs/en/overview) with local tools enabled. In a chat without local tools, the same prompt works as a guided walkthrough; the assistant cannot install files just by replying.
+
+Have Dolphin installed first, then paste this into your assistant:
+
+```text
+Help me install Sunshine in Miniature from this repository:
+https://github.com/zach1020/sunshine-in-miniature
+
+Read its README and inspect the three .glsl files in shaders/.
+If you have local file access, locate my Dolphin installation and its
+active user folder. Use Dolphin's File > Open User Folder to identify it,
+or ask me for that folder path if you cannot determine it reliably.
+If there are multiple installations, ask which one I use.
+
+Download only SunshineDioramaClear.glsl, SunshineDiorama.glsl, and
+SunshineDioramaMax.glsl from that repository. Back up existing files
+with those names, then copy the three files into the active user
+folder's Shaders directory. Create that directory if needed.
+Verify the copied files match the downloaded sources.
+
+Help me select SunshineDiorama in Dolphin's Graphics > Enhancements >
+Post-Processing Effect menu. If Dolphin needs a restart, let me save
+my game first. Explain how to choose Clear or Max, adjust sunlight
+rays, use Max's Crisp mode, and revert to Off.
+
+Keep my saves, controller mappings, other shaders, and game files
+unchanged. Do not download or upload game data. No installer script
+is needed. If you cannot access my files or control Dolphin, walk me
+through these same steps instead and don't claim they are completed.
+```
+
+Once installed, switching presets happens entirely inside Dolphin; the assistant does not need to stay open.
+
+## Cascading sunlight
+
+**Diorama** and **Diorama Max** include warm, fanned-out sunlight shafts. The effect stretches light from bright areas in the upper image toward an adjustable screen position. It works best with bright sky and darker silhouettes that separate the beams.
+
+In **Configure**:
+
+- **Cascading sunlight rays:** toggle the effect. Turn it off to restore the previous preset's rendering.
+- **Sunlight ray strength:** defaults to **1.15**; try **1.5–2.0** for a stronger look. Zero also restores the previous rendering.
+- **Sunlight ray reach:** defaults to **0.85**; raise it to carry the shafts farther across the image.
+- **Sunlight origin horizontal / vertical:** move the apparent source. Defaults are **0.32 / 0.02**, near the upper-left part of the image; the game camera does not move this source automatically.
+
+These are screen-space rays, not volumetric or ray-traced lighting. Bright walls or text can sometimes contribute light, and shafts can appear over foreground objects because there is no depth buffer. Corner protection reduces their effect on corner HUD regions; it is not a complete UI mask. Use Clear, disable rays, or enable Max's Crisp mode when readability matters. Extra sampling adds GPU work.
+
+After updating existing shader files, restart Dolphin or switch the post-processing effect off and back on to reload them. Save your game before restarting.
+
 ## Make Max comfortable to play
 
-Max is deliberately exaggerated. If it obscures text or a cinematic subject, open **Configure** and enable **Crisp mode for dialogue and cutscenes**. This manually removes blur, pixelation, and bloom while retaining Max's color treatment and vignette. It is not an automatic scene detector.
+Max is deliberately exaggerated. If it obscures text or a cinematic subject, open **Configure** and enable **Crisp mode for dialogue and cutscenes**. This manually removes blur, pixelation, bloom, and sunlight rays while retaining Max's color treatment and vignette. It is not an automatic scene detector.
 
 Other useful controls:
 
