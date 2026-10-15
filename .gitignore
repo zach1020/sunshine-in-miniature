@@ -1,0 +1,24 @@
+# Keep game data, emulator installs, personal settings and capture scratch out.
+*.iso
+*.ciso
+*.rvz
+*.gcm
+*.wbfs
+*.wad
+*.gci
+*.raw
+*.sav
+*.s??
+*.exe
+*.dll
+*.ini
+*.zip
+*.7z
+User/
+Dolphin-x64/
+work/
+scenes/
+node_modules/
+__pycache__/
+Thumbs.db
+.DS_Store
