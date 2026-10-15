@@ -4,7 +4,25 @@
 
 Three miniature-inspired post-processing presets for **Dolphin Emulator**. Start with a gentle color treatment, add a soft diorama lens, or turn everything up with **Diorama Max**.
 
-**Shaders only.** Bring your own Dolphin installation and lawfully obtained game. No game images, extracted models, textures, saves, emulator binaries, or executable installers are included.
+**Shader mod.** Bring your own Dolphin installation and lawfully obtained game. No game disc images, extracted models, textures, saves, emulator binaries, or executable installers are included. The gallery contains gameplay screenshots for demonstration.
+
+## In-game comparisons
+
+Captured by zach1020 in Super Mario Sunshine on Dolphin. Click an image for the full-resolution original.
+
+### Plaza walkway
+
+| Off | Standard · Diorama | Diorama Max |
+| --- | --- | --- |
+| [![Plaza walkway with post-processing off](docs/screenshots/plaza-off.png)](docs/screenshots/plaza-off.png) | [![Plaza walkway with the standard Diorama preset](docs/screenshots/plaza-diorama.png)](docs/screenshots/plaza-diorama.png) | [![Plaza walkway with Diorama Max](docs/screenshots/plaza-diorama-max.png)](docs/screenshots/plaza-diorama-max.png) |
+
+### Canal and bridge
+
+| Off | Standard · Diorama | Diorama Max |
+| --- | --- | --- |
+| [![Canal and bridge with post-processing off](docs/screenshots/canal-off.png)](docs/screenshots/canal-off.png) | [![Canal and bridge with the standard Diorama preset](docs/screenshots/canal-diorama.png)](docs/screenshots/canal-diorama.png) | [![Canal and bridge with Diorama Max](docs/screenshots/canal-diorama-max.png)](docs/screenshots/canal-diorama-max.png) |
+
+These are unretouched gameplay captures, with slightly different framing, poses, and animation timing. Labels follow the supplied preset order; exact slider settings were not recorded. **Off** means no post-processing effect, not the separate **Clear** preset. HUD blur is visible in these examples; use Clear or Max's Crisp mode for readability. See [capture notes](docs/SCREENSHOTS.md). Nintendo game imagery is not covered by this project's MIT license.
 
 ## Pick your look
 

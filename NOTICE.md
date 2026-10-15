@@ -7,4 +7,4 @@ The MIT license applies to this project's custom shader code and documentation. 
 - Octopath Traveler and HD-2D are associated with Square Enix. The visual inspiration does not imply endorsement or compatibility with Square Enix products.
 - Shader implementations were authored for this project using Dolphin's documented post-processing interface. [Dolphin's post-processing source](https://github.com/dolphin-emu/dolphin/blob/master/Source/Core/VideoCommon/PostProcessing.cpp) was consulted for API conventions; the emulator source is not bundled here.
 
-No game images, extracted meshes, extracted textures, saves, keys, or personal emulator configuration are included. Users supply their own lawful game data and emulator.
+No game disc images, extracted meshes, extracted textures, saves, keys, or personal emulator configuration are included. Users supply their own lawful game data and emulator. The demonstration gameplay screenshots in docs/screenshots are Nintendo game imagery and are excluded from the MIT license.

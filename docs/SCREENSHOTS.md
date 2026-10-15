@@ -1,6 +1,19 @@
-# Capturing the presets
+# Screenshot gallery and capture notes
 
-The initial release contains shader code and documentation. A screenshot gallery can be added separately.
+The README shows two sets of gameplay captures supplied by zach1020 on October 15, 2026. The PNG files are unchanged from the supplied originals; they have only been renamed for the gallery. Full resolution is preserved.
+
+| Scene | Preset label | Original filename | Repository file |
+| --- | --- | --- | --- |
+| Plaza walkway | Off | Screenshot 2026-10-15 082506.png | [plaza-off.png](screenshots/plaza-off.png) |
+| Plaza walkway | Standard / Diorama | Screenshot 2026-10-15 082444.png | [plaza-diorama.png](screenshots/plaza-diorama.png) |
+| Plaza walkway | Diorama Max | Screenshot 2026-10-15 082349.png | [plaza-diorama-max.png](screenshots/plaza-diorama-max.png) |
+| Canal and bridge | Diorama Max | Screenshot 2026-10-15 082559.png | [canal-diorama-max.png](screenshots/canal-diorama-max.png) |
+| Canal and bridge | Standard / Diorama | Screenshot 2026-10-15 082616.png | [canal-diorama.png](screenshots/canal-diorama.png) |
+| Canal and bridge | Off | Screenshot 2026-10-15 082648.png | [canal-off.png](screenshots/canal-off.png) |
+
+Preset labels follow the contributor's supplied order. The second set was identified tentatively as Max, Standard, Off; its visible blur is consistent with that order, but shader settings cannot be verified from an image alone. Exact slider values and capture-time settings were not recorded. These are illustrative comparisons, not perfectly aligned benchmark frames. Off is not the Clear preset.
+
+## Capture another comparison
 
 For a useful comparison:
 
@@ -12,4 +25,4 @@ For a useful comparison:
 
 Do not use screenshots of the separate ray-traced mesh prototype to advertise these shaders: that prototype's sprites, geometry renderer, and lighting are not part of this package. Do not retouch the effect or present a generated mockup as an in-game capture.
 
-Suggested names for a future gallery: `screenshots/clear.png`, `screenshots/diorama.png`, and `screenshots/diorama-max.png`. Game imagery remains the property of its respective rights holders.
+Game imagery remains the property of its respective rights holders and is not covered by the project's MIT license.
